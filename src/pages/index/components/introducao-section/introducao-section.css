@@ -1,0 +1,151 @@
+.content-main {
+  display: flex;
+  color: var(--white);
+  min-height: 700px;
+  padding-top: 20px;
+  gap: 3rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-side {
+  position: relative;
+  z-index: 5;
+}
+
+.content-side h1 {
+  max-width: 15ch;
+  font-size: 3rem;
+}
+
+.content-side span {
+  color: var(--cor-p3);
+}
+
+.resume-text {
+  max-width: 40ch;
+  font-size: 1.5rem;
+}
+
+.main-buttons {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.main-buttons a {
+  color: var(--cor-p5);
+  padding: 15px 14px;
+  background-color: var(--white);
+  border-radius: 4px;
+  font-weight: 600;
+  max-width: 100%;
+}
+
+.main-buttons a:hover {
+  background-color: var(--cor-c1);
+}
+
+.main-buttons p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-buttons p::before {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  margin-right: 12px;
+}
+
+.main-buttons p::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  margin-left: 12px;
+}
+
+.carrousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carrousel-list {
+  display: flex;
+  width: max-content;
+  gap: 5px;
+  animation: carrouselInfinite 50s linear infinite;
+}
+
+.carrousel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.02));
+  z-index: 2;
+}
+
+.carrousel::after {
+  content: "";
+  position: absolute;
+  width: 5%;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(to left, rgb(0, 0, 0.2), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+
+.card {
+  flex: 0 0 370px;
+  height: auto;
+}
+
+.card img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes carrouselInfinite {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1160px) {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carrousel {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content-side h1 {
+    font-size: 2.5rem;
+  }
+
+  .resume-text {
+    font-size: 1.2rem;
+  }
+}

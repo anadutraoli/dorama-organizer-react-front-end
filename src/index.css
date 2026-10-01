@@ -1,111 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --white: #ffffff;
+  --cor-c1: #f7f7f7;
+  --cor-c2: #ededed;
+  --cor-c3: #dedede;
+  --cor-c4: #cccccc;
+  --cor-c5: #b2b2b2;
+  --cor-c6: #9c9c9c;
+  --cor-c7: #717171;
+  --cor-c8: #595959;
+  --cor-c9: #404040;
+  --cor-c10: #2e2e2e;
+  --cor-c11: #111111;
+  --cor-c12: #000000;
+  --cor-p1: #bf00ff;
+  --cor-p2: #a80be5;
+  --cor-p3: #881ecf;
+  --cor-p4: #5c2681;
+  --cor-p5: #170e1d;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+body,
+h1,
+p,
+h2,
+h3,
+ul,
+header,
+section,
+footer {
+  margin: 0;
+  padding: 0;
 }
 
-#root {
-  width: 1126px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
   max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  display: block;
 }
 
 body {
-  margin: 0;
+  background-color: var(--cor-c12);
+  font-family: var(--font-poppins);
+  color: var(--white);
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+form label {
+  display: block;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
+.menu ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.botao-decorado {
+  color: var(--white);
+  font-family: var(--font-poppins);
+  text-transform: uppercase;
+  padding: 12px 14px;
+  background: linear-gradient(#5c2681, #a80be5);
   border-radius: 4px;
-  color: var(--text-h);
+  font-weight: 600;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.botao-decorado a {
+  padding: 12px 14px;
+}
+
+.botao-decorado:hover {
+  background: linear-gradient(#532372, #9c10d3);
+}
+
+.divisor {
+  margin-top: 200px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-p4);
+}
+
+.footer {
+  padding-top: 50px;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+
+.logo {
+  padding-top: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .container {
+    justify-content: center;
+  }
+  .botao-decorado {
+    display: none;
+  }
+
+  .footer {
+  font-size: 0.6rem;
+}
 }
